@@ -1,1 +1,10 @@
 <app-header></app-header>
+<main>
+    <ul id="user">
+        <li *ngFor="let item of users">
+            <app-user-right [user]="item" (selectUser) = "onSelectUser($event)">
+            </app-user-right>
+        </li>
+    </ul>
+    <app-task [selectedUser]="userName?.name"></app-task>
+</main>
