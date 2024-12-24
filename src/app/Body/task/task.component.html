@@ -1,1 +1,14 @@
-<H1>{{selectedUser}}</H1>
+<app-new-item *ngIf="isAddSrtated" [userId]="selectedUser.id" (close)="OnStartAddItem()"></app-new-item>
+<section id="tasks">
+    <header>
+    <H2>{{selectedUser.name}}</H2>
+    <menu>
+        <Button (click)="OnStartAddItem()">Add Task</Button>
+    </menu>
+    </header>
+    <ul>
+        <li *ngFor="let item of selectUserTask">
+            <app-item [item]="item"></app-item>
+        </li>
+    </ul>
+</section>

@@ -9,7 +9,7 @@ import { MOCK_USERS } from './data/Mock-user';
 export class AppComponent {
   users= MOCK_USERS;
   title = 'TaskManager';
-  selectetUserId='u1';
+  selectetUserId='';
 
   get userName()
   {

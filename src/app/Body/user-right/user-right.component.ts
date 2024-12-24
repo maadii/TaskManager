@@ -1,4 +1,5 @@
 import { Component, Input, Output,EventEmitter  } from '@angular/core';
+import {  type user } from './user.Model';
 
 @Component({
   selector: 'app-user-right',
@@ -6,11 +7,7 @@ import { Component, Input, Output,EventEmitter  } from '@angular/core';
   styleUrls: ['./user-right.component.css']
 })
 export class UserRightComponent {
-@Input() user!:{
-  id:string;
-  avatar:string;
-  name:string;
-};
+@Input() user!: user;
 
 @Output() selectUser= new EventEmitter();
 

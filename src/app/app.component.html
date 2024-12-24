@@ -6,5 +6,9 @@
             </app-user-right>
         </li>
     </ul>
-    <app-task [selectedUser]="userName?.name"></app-task>
+    <app-task  *ngIf="selectetUserId && userName"  [selectedUser]="userName"></app-task>
+    <ng-template #fallback>
+    <p> No user selectetd</p>
+    </ng-template>
+    
 </main>
